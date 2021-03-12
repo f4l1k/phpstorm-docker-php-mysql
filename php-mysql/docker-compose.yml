@@ -14,7 +14,7 @@ services:
     mysql:
         image: mysql:5.6
         environment: 
-            MYSQL_ROOT_PASSWORD: "313807"
+            MYSQL_ROOT_PASSWORD: ""
         ports: 
             - 3306:3306
     php7.4:                # 容器名称, 自行修改
