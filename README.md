@@ -1,6 +1,6 @@
 # phpstorm-docker-php-mysql
 
-## php5.4、php7.4配合mysql在phpstorm上的开发环境
+## php5.4、php7.4配合mysql在phpstorm上的开发环境（自带xdebug）
 
 使用方法
 `docker-compose up -d`
