@@ -1,0 +1,30 @@
+version: '3'
+services:
+    php5.6:                # 容器名称, 自行修改
+        build: ./5.6/           # 构建路径, . 表示会在当前路径下找 Dockerfile 文件
+        # image: php:5.6-apache   # 镜像名称, 如果没有上面的 build, docker-compose 将会尝试从官方仓库 pull 该镜像
+        ports: 
+            - 8000:80     # 映射端口 虚拟机端口:容器内端口
+        volumes: 
+            [/Users/kai/kai/workspace/php:/var/www/html]
+        links: 
+            - mysql     #连接mysql服务
+        stdin_open: true
+        tty: true
+    mysql:
+        image: mysql:5.6
+        environment: 
+            MYSQL_ROOT_PASSWORD: "313807"
+        ports: 
+            - 3306:3306
+    php7.4:                # 容器名称, 自行修改
+        build: ./7.4/           # 构建路径, . 表示会在当前路径下找 Dockerfile 文件
+        # image: php:7.4-apache   # 镜像名称, 如果没有上面的 build, docker-compose 将会尝试从官方仓库 pull 该镜像
+        ports: 
+            - 80:80     # 映射端口 虚拟机端口:容器内端口
+        volumes: 
+            [/Users/kai/kai/workspace/php:/var/www/html]
+        links: 
+            - mysql     #连接mysql服务
+        stdin_open: true
+        tty: true
