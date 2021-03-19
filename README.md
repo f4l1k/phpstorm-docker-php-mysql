@@ -6,3 +6,5 @@
 `docker-compose up -d`
 
 默认mysql密码“test”
+
+注意更改目录映射
