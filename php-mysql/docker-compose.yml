@@ -6,7 +6,7 @@ services:
         ports: 
             - 8000:80     # 映射端口 虚拟机端口:容器内端口
         volumes: 
-            [/Users/kai/kai/workspace/php:/var/www/html]
+            [/Users/f4l1K/f4l1K/workspace/php:/var/www/html]
         links: 
             - mysql     #连接mysql服务
         stdin_open: true
@@ -23,7 +23,7 @@ services:
         ports: 
             - 80:80     # 映射端口 虚拟机端口:容器内端口
         volumes: 
-            [/Users/kai/kai/workspace/php:/var/www/html]
+            [/Users/f4l1K/f4l1K/workspace/php:/var/www/html]
         links: 
             - mysql     #连接mysql服务
         stdin_open: true
